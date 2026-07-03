@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dependency Guardian | Stop Malicious npm & PyPI Packages Before Installation</title>
+    <meta name="description"
+        content="Dependency Guardian scans and blocks malicious packages, supply chain attacks, and typo-squatting in real-time. Secure your developer environment and CI/CD pipelines.">
+    <meta name="keywords"
+        content="dependency security, supply chain attack, malicious npm packages, malicious pypi, developer security, snyk alternative, package scanning, npm security, python security">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dependencyguardian.dev/">
+    <meta property="og:title" content="Dependency Guardian | Stop Malicious Packages Before They Reach Production">
+    <meta property="og:description"
+        content="Prevent malicious npm and PyPI dependencies from compromising your systems.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Blob Glows -->
+    <div class="blob blob-left" aria-hidden="true"></div>
+    <div class="blob blob-right" aria-hidden="true"></div>
+    <div class="blob blob-center" aria-hidden="true"></div>
+
+    <!-- Video Background -->
+    <div class="video-background-wrapper" aria-hidden="true">
+        <video class="background-video" autoplay loop muted playsinline>
+            <source src="background-video.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <!-- Mouse glow -->
+    <div class="mouse-glow" id="mouse-glow-fx" aria-hidden="true"></div>
+
+    <!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+    <header class="site-header" id="site-header">
+        <div class="header-container">
+
+            <!-- Logo -->
+            <a href="#" class="logo-wrapper" id="nav-logo" aria-label="Dependency Guardian Home">
+                <span class="logo-text">DEPENDENCY <br><strong>GUARDIAN</strong></span>
+            </a>
+
+            <!-- Centered Nav -->
+            <nav class="main-nav" aria-label="Primary Navigation">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link">Home</a></li>
+                    <li><a href="#features" class="nav-link">Features</a></li>
+                    <li><a href="#docs" class="nav-link nav-link-active">Docs</a></li>
+                    <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                </ul>
+            </nav>
+
+            <!-- Right Actions -->
+            <div class="nav-actions">
+                <a href="#signup" class="btn btn-nav-purple" id="cta-nav">Start Free →</a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button class="mobile-menu-toggle" id="btn-mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div class="mobile-drawer" id="mobile-drawer">
+            <ul class="mobile-nav-list">
+                <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+                <li><a href="#features" class="mobile-nav-link">Features</a></li>
+                <li><a href="#docs" class="mobile-nav-link">Docs</a></li>
+                <li><a href="#pricing" class="mobile-nav-link">Pricing</a></li>
+            </ul>
+            <a href="#signup" class="btn btn-nav-purple" style="width:100%;text-align:center;">Start Free →</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+        <section class="hero-section" id="hero">
+            <div class="hero-inner">
+
+
+                <!-- Main Headline -->
+                <h1 class="hero-title">
+                    Stop Malicious Packages<br>
+                    <span class="title-accent">Before They Strike.</span>
+                </h1>
+
+                <!-- Subtext -->
+                <p class="hero-sub">
+                    Dependency Guardian scans npm and PyPI packages in real time — blocking supply chain attacks,<br
+                        class="br-desktop"> malicious payloads, and risky dependencies before they ever touch your
+                    codebase.
+                </p>
+
+                <!-- CTAs -->
+                <div class="hero-ctas">
+                    <a href="#signup" class="btn btn-purple-lg" id="cta-start-free">
+                        Get Started Free
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </a>
+                    <a href="#demo" class="btn btn-outline-lg" id="cta-demo">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                            <polygon points="6,4 20,12 6,20" />
+                        </svg>
+                        See How It Works
+                    </a>
+                </div>
+
+                <!-- Trust Pills -->
+                <div class="trust-row">
+                    <span class="trust-pill">
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        No credit card
+                    </span>
+                    <span class="trust-pill">
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        npm & PyPI ready
+                    </span>
+                    <span class="trust-pill">
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        3-minute setup
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════ FEATURE CARDS ═══════════════════════════ -->
+        <section class="cards-section" id="features">
+            <div class="cards-grid">
+
+                <!-- Card 1 -->
+                <div class="feat-card">
+                    <div class="card-icon-wrap icon-cyan">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            <polyline points="9 12 11 14 15 10" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Real-Time Scanning</h3>
+                    <p class="card-desc">Instantly scans npm and PyPI packages on install, flagging malicious code
+                        before it enters your codebase.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="feat-card feat-card-center">
+                    <div class="card-icon-wrap icon-blue">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                            <circle cx="12" cy="16" r="1" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Dependency Locking</h3>
+                    <p class="card-desc">Locks verified package versions to prevent supply chain attacks and
+                        unauthorized dependency swaps.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="feat-card">
+                    <div class="card-icon-wrap icon-orange">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <path
+                                d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                            <line x1="12" y1="9" x2="12" y2="13" />
+                            <line x1="12" y1="17" x2="12.01" y2="17" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Security Alerts</h3>
+                    <p class="card-desc">Delivers instant vulnerability alerts with severity ratings and actionable
+                        remediation steps for your team.</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
