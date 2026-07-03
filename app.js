@@ -4,6 +4,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileBtn  = document.getElementById('btn-mobile-toggle');
     const mouseGlow  = document.getElementById('mouse-glow-fx');
 
+    /* ── Mobile Autoplay video force-play ────────────────────────── */
+    const video = document.querySelector('.background-video');
+    if (video) {
+        // Ensure play is forced if auto-play fails (e.g. low-power mode)
+        const playVideo = () => {
+            video.play().catch(err => {
+                console.log("Autoplay blocked, waiting for user click/touch to play.");
+            });
+        };
+        playVideo();
+        // Fallback triggers on user interaction
+        document.addEventListener('click', playVideo, { once: true });
+        document.addEventListener('touchstart', playVideo, { once: true });
+    }
+
     /* ── Scroll: shrink header ───────────────────────────────────── */
     window.addEventListener('scroll', () => {
         header.classList.toggle('scrolled', window.scrollY > 30);
